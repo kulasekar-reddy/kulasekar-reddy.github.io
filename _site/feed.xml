@@ -1,4 +1,58 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-17T17:56:27+05:30</updated><id>/</id><title>Kulasekar Reddy</title><subtitle>Work hard celebrate harder</subtitle><entry><title>SpringBoot newlrelic integration through actuator</title><link href="/newrelic_springboot_integration/" rel="alternate" type="text/html" title="SpringBoot newlrelic integration through actuator" /><published>2018-06-15T00:00:00+05:30</published><updated>2018-06-15T00:00:00+05:30</updated><id>/newrelic_springboot_integration</id><content type="html" xml:base="/newrelic_springboot_integration/">&lt;p&gt;In this post I am going to show you how to push insights to NewRelic using spring boot actuator plugin&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-17T19:20:10+05:30</updated><id>/</id><title>reddy@82</title><subtitle>Work hard celebrate harder</subtitle><entry><title>git-flow</title><link href="/Gitfolw-commands/" rel="alternate" type="text/html" title="git-flow" /><published>2018-06-17T00:00:00+05:30</published><updated>2018-06-17T00:00:00+05:30</updated><id>/Gitfolw-commands</id><content type="html" xml:base="/Gitfolw-commands/">&lt;p&gt;In this post I am going to show you how to use gitflow.&lt;/p&gt;
+
+&lt;h3 id=&quot;installing-git-flow-on-ubuntu&quot;&gt;Installing git-flow on ubuntu&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-unixo&quot;&gt;sudo apt-get update
+sudo apt-get install git-flow
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&quot;to-initialize-git-flow-on-a-repositry&quot;&gt;To initialize git-flow on a repositry&lt;/h3&gt;
+&lt;pre&gt;&lt;code class=&quot;language-unix&quot;&gt;git flow init
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Select all default values, Because those default values are better for maintaining the git flow.&lt;/p&gt;
+
+&lt;h3 id=&quot;branches&quot;&gt;Branches&lt;/h3&gt;
+
+&lt;p&gt;After &lt;code class=&quot;highlighter-rouge&quot;&gt;git flow init&lt;/code&gt; you will be moved to develop branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;master:&lt;/strong&gt; This branch contains production ready code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;develop:&lt;/strong&gt; This is the branch where all developers merging their code.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;feature:&lt;/strong&gt; This is the branch where individual developer will be working on new features.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;release:&lt;/strong&gt; Release branches are useful in giving releases by providing a tag to it.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;hotfix:&lt;/strong&gt; hotfix brach is created based on master brach.&lt;/p&gt;
+
+&lt;h3 id=&quot;starting-a-feature-branch&quot;&gt;Starting a feature branch&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git flow feature start newfeature&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;to-finish-the-feature-branch&quot;&gt;To finish the feature branch&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git flow feature finish newfeature&lt;/code&gt;
+After finishing the feature branch it will automatically merged to develop branch
+Once Devlopment of any feature is completed we have to release it by providing a tag&lt;/p&gt;
+
+&lt;h3 id=&quot;starting-a-release-branch&quot;&gt;Starting a release branch&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git flow release start 1.0.0&lt;/code&gt;
+once you start a release branch,tag 1.0.0 will be created based on develop branch code.&lt;/p&gt;
+
+&lt;h3 id=&quot;to-finish-release-branch&quot;&gt;To finish release branch&lt;/h3&gt;
+
+&lt;p&gt;Once your release is successfully certified by QA,Then finish release branch
+&lt;code class=&quot;highlighter-rouge&quot;&gt;git flow release finish 1.0.0&lt;/code&gt;
+After finishing the release branch it will automatically merged to master branch&lt;/p&gt;
+
+&lt;h3 id=&quot;fixing-issues-in-production&quot;&gt;Fixing issues in production&lt;/h3&gt;
+
+&lt;p&gt;To fix issues in production create a hotfix branch,It will be based on master code &lt;code class=&quot;highlighter-rouge&quot;&gt;git flow hotfix start bugfix&lt;/code&gt;
+After fixing the issue finish the hotfix branch &lt;code class=&quot;highlighter-rouge&quot;&gt;git flow hotfix finish bugfix&lt;/code&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;push-tag-to-remote-repositry&quot;&gt;Push tag to remote repositry&lt;/h3&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin &amp;lt;tag&amp;gt;&lt;/code&gt;&lt;/p&gt;</content><category term="git" /><category term="git flow" /><category term="SCM" /><summary>In this post I am going to show you how to use gitflow.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;background&quot;=&gt;&quot;triangular.png&quot;}" /></entry><entry><title>SpringBoot newlrelic integration through actuator</title><link href="/newrelic_springboot_integration/" rel="alternate" type="text/html" title="SpringBoot newlrelic integration through actuator" /><published>2018-06-15T00:00:00+05:30</published><updated>2018-06-15T00:00:00+05:30</updated><id>/newrelic_springboot_integration</id><content type="html" xml:base="/newrelic_springboot_integration/">&lt;p&gt;In this post I am going to show you how to push insights to NewRelic using spring boot actuator plugin&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Gradle dependencies required&lt;/strong&gt;&lt;/p&gt;
 
