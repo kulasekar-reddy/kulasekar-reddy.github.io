@@ -2,7 +2,7 @@
 layout: page
 title: About Kulasekar Reddy
 image:
-  feature: abstract-5.jpg
+  feature: cover1.jpg
 comments: false
 modified: 2016-02-01
 ---
