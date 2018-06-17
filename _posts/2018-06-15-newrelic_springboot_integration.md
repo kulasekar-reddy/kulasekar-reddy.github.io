@@ -69,39 +69,41 @@ public class MetricsConfig {
 *Required Imports*
 
 ```java
-  import io.micrometer.core.instrument.MeterRegistry;
+import io.micrometer.core.instrument.MeterRegistry;
 ```
 *Autowire MeterRegistry*
 
 ```java
-  @Autowired
-  private MeterRegistry meterRegistry;
+@Autowired
+private MeterRegistry meterRegistry;
 ```
 **Declare the counter values**
 
 *Required Imports*
 
 ```java
-  import io.micrometer.core.instrument.Counter;
+import io.micrometer.core.instrument.Counter;
 ```
 
 *Intialise Counters*
 
 ```java
-  private Counter successCounter;
-  private Counter failureCounter;
+private Counter successCounter;
+private Counter failureCounter;
 ```
 *Instansite  Counters using postconstruct*
 
 ```java
-  @PostConstruct
-  public void init(){
-    successCounter = meterRegistry.counter("success.counter");
-    failureCounter = meterRegistry.counter("failure.counter");
-  }
+@PostConstruct
+public void init(){
+  successCounter = meterRegistry.counter("success.counter");
+  failureCounter = meterRegistry.counter("failure.counter");
+}
 ```
 *Increment counters based on your business logic*
+
 ```java
-    successCounter.increment();
-    failureCounter.increment();
+successCounter.increment();
+failureCounter.increment();
 ```
+

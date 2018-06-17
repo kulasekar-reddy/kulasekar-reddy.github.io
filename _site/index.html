@@ -15,7 +15,7 @@
 
 <meta name="twitter:title" content="Latest Posts">
 <meta name="twitter:description" content="Work Hard Celebrate Harder">
-<meta name="twitter:creator" content="@https://twitter.com/imReddy82">
+<meta name="twitter:creator" content="@imReddy82">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
@@ -89,15 +89,15 @@
 					<a href="mailto:kulasekhar93@gmail.com"><i class="fa fa-fw fa-envelope"></i> Email</a>
 				</li>
 				<li>
-					<a href="https://twitter.com/https://twitter.com/imReddy82"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
+					<a href="https://twitter.com/imReddy82"><i class="fa fa-fw fa-twitter"></i> Twitter</a>
 				</li>
 				<li>
-					<a href="https://facebook.com/https://www.facebook.com/P.kulasekharReddy"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
+					<a href="https://facebook.com/P.kulasekharReddy"><i class="fa fa-fw fa-facebook"></i> Facebook</a>
 				</li>
 				
 				
 				<li>
-					<a href="https://github.com/https://github.com/kulasekar-reddy"><i class="fa fa-fw fa-github"></i> GitHub</a>
+					<a href="https://github.com/kulasekar-reddy"><i class="fa fa-fw fa-github"></i> GitHub</a>
 				</li>
 				
 				
@@ -212,43 +212,45 @@ Reading time ~1 minute
 
 <p><em>Required Imports</em></p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">io.micrometer.core.instrument.MeterRegistry</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">io.micrometer.core.instrument.MeterRegistry</span><span class="o">;</span>
 </code></pre>
 </div>
 <p><em>Autowire MeterRegistry</em></p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>  <span class="nd">@Autowired</span>
-  <span class="kd">private</span> <span class="n">MeterRegistry</span> <span class="n">meterRegistry</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@Autowired</span>
+<span class="kd">private</span> <span class="n">MeterRegistry</span> <span class="n">meterRegistry</span><span class="o">;</span>
 </code></pre>
 </div>
 <p><strong>Declare the counter values</strong></p>
 
 <p><em>Required Imports</em></p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>  <span class="kn">import</span> <span class="nn">io.micrometer.core.instrument.Counter</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">io.micrometer.core.instrument.Counter</span><span class="o">;</span>
 </code></pre>
 </div>
 
 <p><em>Intialise Counters</em></p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>  <span class="kd">private</span> <span class="n">Counter</span> <span class="n">successCounter</span><span class="o">;</span>
-  <span class="kd">private</span> <span class="n">Counter</span> <span class="n">failureCounter</span><span class="o">;</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="kd">private</span> <span class="n">Counter</span> <span class="n">successCounter</span><span class="o">;</span>
+<span class="kd">private</span> <span class="n">Counter</span> <span class="n">failureCounter</span><span class="o">;</span>
 </code></pre>
 </div>
 <p><em>Instansite  Counters using postconstruct</em></p>
 
-<div class="language-java highlighter-rouge"><pre class="highlight"><code>  <span class="nd">@PostConstruct</span>
-  <span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(){</span>
-    <span class="n">successCounter</span> <span class="o">=</span> <span class="n">meterRegistry</span><span class="o">.</span><span class="na">counter</span><span class="o">(</span><span class="s">"success.counter"</span><span class="o">);</span>
-    <span class="n">failureCounter</span> <span class="o">=</span> <span class="n">meterRegistry</span><span class="o">.</span><span class="na">counter</span><span class="o">(</span><span class="s">"failure.counter"</span><span class="o">);</span>
-  <span class="o">}</span>
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="nd">@PostConstruct</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">init</span><span class="o">(){</span>
+  <span class="n">successCounter</span> <span class="o">=</span> <span class="n">meterRegistry</span><span class="o">.</span><span class="na">counter</span><span class="o">(</span><span class="s">"success.counter"</span><span class="o">);</span>
+  <span class="n">failureCounter</span> <span class="o">=</span> <span class="n">meterRegistry</span><span class="o">.</span><span class="na">counter</span><span class="o">(</span><span class="s">"failure.counter"</span><span class="o">);</span>
+<span class="o">}</span>
 </code></pre>
 </div>
-<p><em>Increment counters based on your business logic</em>
-<code class="highlighter-rouge">java
-    successCounter.increment();
-    failureCounter.increment();
-</code></p>
+<p><em>Increment counters based on your business logic</em></p>
+
+<div class="language-java highlighter-rouge"><pre class="highlight"><code><span class="n">successCounter</span><span class="o">.</span><span class="na">increment</span><span class="o">();</span>
+<span class="n">failureCounter</span><span class="o">.</span><span class="na">increment</span><span class="o">();</span>
+</code></pre>
+</div>
+
 
   </div><!-- /.entry-content -->
 </article><!-- /.hentry -->
