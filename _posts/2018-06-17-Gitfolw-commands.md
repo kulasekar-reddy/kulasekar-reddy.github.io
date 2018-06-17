@@ -7,7 +7,7 @@ comments: true
 share:    true
 tags: [git,git flow,SCM]
 image:
-  background: triangular.png
+  background: wood.jpg
 ---
 
 In this post I am going to show you how to use gitflow.

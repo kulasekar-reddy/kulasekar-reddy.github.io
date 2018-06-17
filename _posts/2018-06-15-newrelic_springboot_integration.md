@@ -8,7 +8,7 @@ comments: true
 share:    true
 tags: [New Relic,Spring Boot,Metric Registrey,Actuator]
 image:
-  background: triangular.png
+  background: wood.jpg
 ---
 
 In this post I am going to show you how to push insights to NewRelic using spring boot actuator plugin

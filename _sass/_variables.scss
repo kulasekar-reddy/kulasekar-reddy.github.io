@@ -6,8 +6,8 @@
    Page
    ========================================================================== */
 
-$feature-image-height            : 200px; // min 150px recommended
-$front-page-feature-image-height : 200px; // min 150px recommended
+$feature-image-height            : 300px; // min 150px recommended
+$front-page-feature-image-height : 300px; // min 150px recommended
 
 /* 
    Typography
@@ -33,12 +33,12 @@ body {
    Colors
    ========================================================================== */
 
-$base-color                      : rgba(#222,0.8);
+$base-color                      : #000000;
 $body-color                      : #cc0033;
-$text-color                      : rgba(#222,0.8);
-$comp-color                      : complement(#222);
-$border-color                    : lighten($base-color,60);
-$link-color                      : rgba(#222,0.8);
+$text-color                      : #000000;
+$comp-color                      : #5cb85c;
+$border-color                    : #5cb85c;
+$link-color                      : #5cb85c;
 
 $primary                         : #222;
 $success                         : #5cb85c;
