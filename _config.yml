@@ -1,4 +1,4 @@
-title:            Kulasekar Reddy
+title:            reddy@82
 description:      Work hard celebrate harder
 disqus_shortname: kulasekar-reddy-github-io
 reading_time:     true
@@ -52,7 +52,7 @@ sass:
 permalink:   /:categories/:title/
 
 # Amount of post to show on home page
-paginate: 3
+paginate: 5
 
 kramdown:
   input: GFM

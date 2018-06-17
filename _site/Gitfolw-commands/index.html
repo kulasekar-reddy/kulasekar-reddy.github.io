@@ -5,31 +5,31 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>gitflow &#8211; Kulasekar Reddy</title>
+<title>git-flow &#8211; reddy@82</title>
 <meta name="description" content="Using gitflow helps developers for keeping track on releases and features">
 <meta name="keywords" content="git, git flow, SCM">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
-<meta name="twitter:title" content="gitflow">
+<meta name="twitter:title" content="git-flow">
 <meta name="twitter:description" content="Using gitflow helps developers for keeping track on releases and features">
 <meta name="twitter:creator" content="@imReddy82">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="gitflow">
+<meta property="og:title" content="git-flow">
 <meta property="og:description" content="Using gitflow helps developers for keeping track on releases and features">
 <meta property="og:url" content="/Gitfolw-commands/">
-<meta property="og:site_name" content="Kulasekar Reddy">
+<meta property="og:site_name" content="reddy@82">
 
 
 
 
 
 <link rel="canonical" href="/Gitfolw-commands/">
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Kulasekar Reddy Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="reddy@82 Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
@@ -112,9 +112,6 @@
 			</ul>
 		</li>
 		
-	    
-	    <li><a href="/theme-setup/" >Theme Setup</a></li>
-	  
 	</ul><!-- /.dl-menu -->
 </nav><!-- /.dl-menuwrapper -->
 
@@ -126,14 +123,14 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="/Gitfolw-commands/" rel="bookmark" title="gitflow">gitflow</a></h1>
+          <h1 class="entry-title"><a href="/Gitfolw-commands/" rel="bookmark" title="git-flow">git-flow</a></h1>
         
         <h2><span class="entry-date date published"><time datetime="2018-06-17T00:00:00+05:30">June 17, 2018</time></span></h2>
         
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-Reading time ~1 minute
+Reading time ~2 minutes
         </p><!-- /.entry-reading-time -->
         
       </div><!-- /.header-title-wrap -->
@@ -147,8 +144,53 @@ sudo apt-get install git-flow
 </code></pre>
 
 <h3 id="to-initialize-git-flow-on-a-repositry">To initialize git-flow on a repositry</h3>
-<p>```unix
-git flow init</p>
+<pre><code class="language-unix">git flow init
+</code></pre>
+<p>Select all default values, Because those default values are better for maintaining the git flow.</p>
+
+<h3 id="branches">Branches</h3>
+
+<p>After <code class="highlighter-rouge">git flow init</code> you will be moved to develop branch.</p>
+
+<p><strong>master:</strong> This branch contains production ready code.</p>
+
+<p><strong>develop:</strong> This is the branch where all developers merging their code.</p>
+
+<p><strong>feature:</strong> This is the branch where individual developer will be working on new features.</p>
+
+<p><strong>release:</strong> Release branches are useful in giving releases by providing a tag to it.</p>
+
+<p><strong>hotfix:</strong> hotfix brach is created based on master brach.</p>
+
+<h3 id="starting-a-feature-branch">Starting a feature branch</h3>
+
+<p><code class="highlighter-rouge">git flow feature start newfeature</code></p>
+
+<h3 id="to-finish-the-feature-branch">To finish the feature branch</h3>
+
+<p><code class="highlighter-rouge">git flow feature finish newfeature</code>
+After finishing the feature branch it will automatically merged to develop branch
+Once Devlopment of any feature is completed we have to release it by providing a tag</p>
+
+<h3 id="starting-a-release-branch">Starting a release branch</h3>
+
+<p><code class="highlighter-rouge">git flow release start 1.0.0</code>
+once you start a release branch,tag 1.0.0 will be created based on develop branch code.</p>
+
+<h3 id="to-finish-release-branch">To finish release branch</h3>
+
+<p>Once your release is successfully certified by QA,Then finish release branch
+<code class="highlighter-rouge">git flow release finish 1.0.0</code>
+After finishing the release branch it will automatically merged to master branch</p>
+
+<h3 id="fixing-issues-in-production">Fixing issues in production</h3>
+
+<p>To fix issues in production create a hotfix branch,It will be based on master code <code class="highlighter-rouge">git flow hotfix start bugfix</code>
+After fixing the issue finish the hotfix branch <code class="highlighter-rouge">git flow hotfix finish bugfix</code></p>
+
+<h3 id="push-tag-to-remote-repositry">Push tag to remote repositry</h3>
+
+<p><code class="highlighter-rouge">git push origin &lt;tag&gt;</code></p>
 
       <footer class="entry-meta">
         <span class="entry-tags"><a href="/tags/#git" title="Pages tagged git" class="tag"><span class="term">git</span></a><a href="/tags/#git flow" title="Pages tagged git flow" class="tag"><span class="term">git flow</span></a><a href="/tags/#SCM" title="Pages tagged SCM" class="tag"><span class="term">SCM</span></a></span>
