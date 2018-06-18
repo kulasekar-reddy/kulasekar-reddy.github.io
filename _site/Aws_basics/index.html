@@ -5,30 +5,30 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>git-flow &#8211; Work hard celebrate harder</title>
-<meta name="description" content="Using gitflow helps developers for keeping track on releases and features">
-<meta name="keywords" content="git, git flow, SCM">
+<title>AWS Basics &#8211; Work hard celebrate harder</title>
+<meta name="description" content="How to use AWS free instances from local">
+<meta name="keywords" content="aws, linux">
 
 <!-- Twitter Cards -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="/images/">
-<meta name="twitter:title" content="git-flow">
-<meta name="twitter:description" content="Using gitflow helps developers for keeping track on releases and features">
+<meta name="twitter:title" content="AWS Basics">
+<meta name="twitter:description" content="How to use AWS free instances from local">
 <meta name="twitter:creator" content="@imReddy82">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git-flow">
-<meta property="og:description" content="Using gitflow helps developers for keeping track on releases and features">
-<meta property="og:url" content="/Gitfolw-commands/">
+<meta property="og:title" content="AWS Basics">
+<meta property="og:description" content="How to use AWS free instances from local">
+<meta property="og:url" content="/Aws_basics/">
 <meta property="og:site_name" content="Work hard celebrate harder">
 
 
 
 
 
-<link rel="canonical" href="/Gitfolw-commands/">
+<link rel="canonical" href="/Aws_basics/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Work hard celebrate harder Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -123,84 +123,44 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="/Gitfolw-commands/" rel="bookmark" title="git-flow">git-flow</a></h1>
+          <h1 class="entry-title"><a href="/Aws_basics/" rel="bookmark" title="AWS Basics">AWS Basics</a></h1>
         
         <h2><span class="entry-date date published"><time datetime="2018-06-17T00:00:00+05:30">June 17, 2018</time></span></h2>
         
         <p class="entry-reading-time">
           <i class="fa fa-clock-o"></i>
           
-Reading time ~2 minutes
+Reading time ~1 minute
         </p><!-- /.entry-reading-time -->
         
       </div><!-- /.header-title-wrap -->
     </header>
     <div class="entry-content">
-      <p>In this post I am going to show you how to use gitflow.</p>
+      <p>Basic commands used in AWS</p>
 
-<h3 id="installing-git-flow-on-ubuntu">Installing git-flow on ubuntu</h3>
-<pre><code class="language-unixo">sudo apt-get update
-sudo apt-get install git-flow
+<h3 id="connecting-to-remote-aws">connecting to remote AWS</h3>
+<div class="highlighter-rouge"><pre class="highlight"><code>ssh -i "&lt;pemfile&gt;.pem" ec2-user@&lt;servername&gt;
 </code></pre>
+</div>
 
-<h3 id="to-initialize-git-flow-on-a-repositry">To initialize git-flow on a repositry</h3>
-<pre><code class="language-unix">git flow init
+<p>pemfile and servername you will get from AWS console under EC2 section</p>
+
+<h3 id="copying-local-filefolder-to-remote-aws-machine">Copying local file/folder to remote AWS machine</h3>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>scp -i &lt;pemfile&gt;.pem -r &lt;file/folder name&gt;  ec2-user@&lt;severname&gt;:~/.
 </code></pre>
-<p>Select all default values, Because those default values are better for maintaining the git flow.</p>
+</div>
 
-<h3 id="branches">Branches</h3>
-
-<p>After <code class="highlighter-rouge">git flow init</code> you will be moved to develop branch.</p>
-
-<p><strong>master:</strong> This branch contains production ready code.</p>
-
-<p><strong>develop:</strong> This is the branch where all developers merging their code.</p>
-
-<p><strong>feature:</strong> This is the branch where individual developer will be working on new features.</p>
-
-<p><strong>release:</strong> Release branches are useful in giving releases by providing a tag to it.</p>
-
-<p><strong>hotfix:</strong> hotfix brach is created based on master brach.</p>
-
-<h3 id="starting-a-feature-branch">Starting a feature branch</h3>
-
-<p><code class="highlighter-rouge">git flow feature start newfeature</code></p>
-
-<h3 id="to-finish-the-feature-branch">To finish the feature branch</h3>
-
-<p><code class="highlighter-rouge">git flow feature finish newfeature</code>
-After finishing the feature branch it will automatically merged to develop branch
-Once Devlopment of any feature is completed we have to release it by providing a tag</p>
-
-<h3 id="starting-a-release-branch">Starting a release branch</h3>
-
-<p><code class="highlighter-rouge">git flow release start 1.0.0</code>
-once you start a release branch,tag 1.0.0 will be created based on develop branch code.</p>
-
-<h3 id="to-finish-release-branch">To finish release branch</h3>
-
-<p>Once your release is successfully certified by QA,Then finish release branch
-<code class="highlighter-rouge">git flow release finish 1.0.0</code>
-After finishing the release branch it will automatically merged to master branch</p>
-
-<h3 id="fixing-issues-in-production">Fixing issues in production</h3>
-
-<p>To fix issues in production create a hotfix branch,It will be based on master code <code class="highlighter-rouge">git flow hotfix start bugfix</code>
-After fixing the issue finish the hotfix branch <code class="highlighter-rouge">git flow hotfix finish bugfix</code></p>
-
-<h3 id="push-tag-to-remote-repositry">Push tag to remote repositry</h3>
-
-<p><code class="highlighter-rouge">git push origin &lt;tag&gt;</code></p>
+<p>The above command will copy file to <code class="highlighter-rouge">/home/ec2-user</code> folder in your AWS instance</p>
 
       <footer class="entry-meta">
-        <span class="entry-tags"><a href="/tags/#git" title="Pages tagged git" class="tag"><span class="term">git</span></a><a href="/tags/#git flow" title="Pages tagged git flow" class="tag"><span class="term">git flow</span></a><a href="/tags/#SCM" title="Pages tagged SCM" class="tag"><span class="term">SCM</span></a></span>
-        <span>Updated on <span class="entry-date date updated"><time datetime="2018-06-17">June 17, 2018</time></span></span>
-        <span class="author vcard"><span class="fn">Kulasekar Reddy.P</span></span>
+        <span class="entry-tags"><a href="/tags/#aws" title="Pages tagged aws" class="tag"><span class="term">aws</span></a><a href="/tags/#linux" title="Pages tagged linux" class="tag"><span class="term">linux</span></a></span>
+        
         <div class="social-share">
   <ul class="socialcount socialcount-small inline-list">
-    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/Gitfolw-commands/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
-    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/Gitfolw-commands/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
-    <li class="googleplus"><a href="https://plus.google.com/share?url=/Gitfolw-commands/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/Aws_basics/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/Aws_basics/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/Aws_basics/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
   </ul>
 </div><!-- /.social-share -->
       </footer>
@@ -209,11 +169,11 @@ After fixing the issue finish the hotfix branch <code class="highlighter-rouge">
     <div class="read-more">
   
     <div class="read-more-header">
-      <a href="/Aws_basics/" class="read-more-btn">Read More</a>
+      <a href="/newrelic_springboot_integration/" class="read-more-btn">Read More</a>
     </div><!-- /.read-more-header -->
     <div class="read-more-content">
-      <h3><a href="/Aws_basics/" title="AWS Basics">AWS Basics</a></h3>
-      <p>How to use AWS free instances from local <a href="/Aws_basics/">Continue reading</a></p>
+      <h3><a href="/Gitfolw-commands/" title="git-flow">git-flow</a></h3>
+      <p>Using gitflow helps developers for keeping track on releases and features <a href="/Gitfolw-commands/">Continue reading</a></p>
     </div><!-- /.read-more-content -->
   
   <div class="read-more-list">

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-17T22:15:10+05:30</updated><id>/</id><title>Work hard celebrate harder</title><subtitle>Work hard celebrate harder</subtitle><entry><title>git-flow</title><link href="/Gitfolw-commands/" rel="alternate" type="text/html" title="git-flow" /><published>2018-06-17T00:00:00+05:30</published><updated>2018-06-17T00:00:00+05:30</updated><id>/Gitfolw-commands</id><content type="html" xml:base="/Gitfolw-commands/">&lt;p&gt;In this post I am going to show you how to use gitflow.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom"><generator uri="http://jekyllrb.com" version="3.1.6">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-06-18T17:28:49+05:30</updated><id>/</id><title>Work hard celebrate harder</title><subtitle>Work hard celebrate harder</subtitle><entry><title>git-flow</title><link href="/Gitfolw-commands/" rel="alternate" type="text/html" title="git-flow" /><published>2018-06-17T00:00:00+05:30</published><updated>2018-06-17T00:00:00+05:30</updated><id>/Gitfolw-commands</id><content type="html" xml:base="/Gitfolw-commands/">&lt;p&gt;In this post I am going to show you how to use gitflow.&lt;/p&gt;
 
 &lt;h3 id=&quot;installing-git-flow-on-ubuntu&quot;&gt;Installing git-flow on ubuntu&lt;/h3&gt;
 &lt;pre&gt;&lt;code class=&quot;language-unixo&quot;&gt;sudo apt-get update
@@ -52,7 +52,22 @@ After fixing the issue finish the hotfix branch &lt;code class=&quot;highlighter
 
 &lt;h3 id=&quot;push-tag-to-remote-repositry&quot;&gt;Push tag to remote repositry&lt;/h3&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin &amp;lt;tag&amp;gt;&lt;/code&gt;&lt;/p&gt;</content><category term="git" /><category term="git flow" /><category term="SCM" /><summary>In this post I am going to show you how to use gitflow.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;background&quot;=&gt;&quot;wood.jpg&quot;}" /></entry><entry><title>SpringBoot newlrelic integration through actuator</title><link href="/newrelic_springboot_integration/" rel="alternate" type="text/html" title="SpringBoot newlrelic integration through actuator" /><published>2018-06-15T00:00:00+05:30</published><updated>2018-06-15T00:00:00+05:30</updated><id>/newrelic_springboot_integration</id><content type="html" xml:base="/newrelic_springboot_integration/">&lt;p&gt;In this post I am going to show you how to push insights to NewRelic using spring boot actuator plugin&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;git push origin &amp;lt;tag&amp;gt;&lt;/code&gt;&lt;/p&gt;</content><category term="git" /><category term="git flow" /><category term="SCM" /><summary>In this post I am going to show you how to use gitflow.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;background&quot;=&gt;&quot;wood.jpg&quot;}" /></entry><entry><title>AWS Basics</title><link href="/Aws_basics/" rel="alternate" type="text/html" title="AWS Basics" /><published>2018-06-17T00:00:00+05:30</published><updated>2018-06-17T00:00:00+05:30</updated><id>/Aws_basics</id><content type="html" xml:base="/Aws_basics/">&lt;p&gt;Basic commands used in AWS&lt;/p&gt;
+
+&lt;h3 id=&quot;connecting-to-remote-aws&quot;&gt;connecting to remote AWS&lt;/h3&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ssh -i &quot;&amp;lt;pemfile&amp;gt;.pem&quot; ec2-user@&amp;lt;servername&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;pemfile and servername you will get from AWS console under EC2 section&lt;/p&gt;
+
+&lt;h3 id=&quot;copying-local-filefolder-to-remote-aws-machine&quot;&gt;Copying local file/folder to remote AWS machine&lt;/h3&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;scp -i &amp;lt;pemfile&amp;gt;.pem -r &amp;lt;file/folder name&amp;gt;  ec2-user@&amp;lt;severname&amp;gt;:~/.
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;The above command will copy file to &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/ec2-user&lt;/code&gt; folder in your AWS instance&lt;/p&gt;</content><category term="aws" /><category term="linux" /><summary>Basic commands used in AWS</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="{&quot;background&quot;=&gt;&quot;wood.jpg&quot;}" /></entry><entry><title>SpringBoot newlrelic integration through actuator</title><link href="/newrelic_springboot_integration/" rel="alternate" type="text/html" title="SpringBoot newlrelic integration through actuator" /><published>2018-06-15T00:00:00+05:30</published><updated>2018-06-15T00:00:00+05:30</updated><id>/newrelic_springboot_integration</id><content type="html" xml:base="/newrelic_springboot_integration/">&lt;p&gt;In this post I am going to show you how to push insights to NewRelic using spring boot actuator plugin&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Gradle dependencies required&lt;/strong&gt;&lt;/p&gt;
 
