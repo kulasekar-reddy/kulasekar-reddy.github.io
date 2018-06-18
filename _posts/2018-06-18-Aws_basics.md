@@ -6,6 +6,7 @@ created: 2018-06-18
 comments: true
 share:    true
 tags: [aws,linux]
+categories: AWS
 image:
   background: wood.jpg
 ---

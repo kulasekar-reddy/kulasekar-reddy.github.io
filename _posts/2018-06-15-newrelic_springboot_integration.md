@@ -6,6 +6,7 @@ NewRelic using metric registrey"
 created: 2018-06-16
 comments: true
 share:    true
+categories: NewRelic
 tags: [New Relic,Spring Boot,Metric Registrey,Actuator]
 image:
   background: wood.jpg

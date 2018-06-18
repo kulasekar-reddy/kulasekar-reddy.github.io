@@ -12,6 +12,9 @@
 {% include browser-upgrade.html %}
 {% include navigation.html %}
 
+{% capture site_categories %}{% for tag in site.categories %}{{ tag | first }}{% unless forloop.last %},{% endunless %}{% endfor %}{% endcapture %}
+{% assign categories_list = site_categories | split:',' | sort %}
+
 <div class="entry-header">
   {% if page.image.credit %}<div class="image-credit">Image source: <a href="{{ page.image.creditlink }}">{{ page.image.credit }}</a></div><!-- /.image-credit -->{% endif %}
   {% if page.image.feature %}
@@ -26,7 +29,14 @@
     </div><!-- /.header-title-wrap -->
   </div><!-- /.header-title -->
 </div><!-- /.entry-header -->
-
+<div align="center">
+<ul class="entry-meta inline-list">
+  {% for item in (0..site.categories.size) %}{% unless forloop.last %}
+    {% capture this_word %}{{ categories_list[item] | strip_newlines }}{% endcapture %}
+    <li><a href="{{ site.url }}/categories/#{{ this_word }}" class="tag"><span class="term">{{ this_word }}</span> <span class="count">{{ site.categories[this_word].size }}</span></a></li>
+  {% endunless %}{% endfor %}
+</ul>
+</div>
 <div id="main" role="main">
   {{ content }}
 </div><!-- /#main -->

@@ -87,3 +87,6 @@ exclude:
   - package.json
   - spec
   - tmp
+collections:
+  projects:
+    output: true
