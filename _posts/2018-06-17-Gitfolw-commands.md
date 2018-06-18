@@ -2,7 +2,7 @@
 layout: post
 title: git-flow
 description: "Using gitflow helps developers for keeping track on releases and features"
-modified: 2018-06-17
+created: 2018-06-17
 comments: true
 share:    true
 tags: [git,git flow,SCM]

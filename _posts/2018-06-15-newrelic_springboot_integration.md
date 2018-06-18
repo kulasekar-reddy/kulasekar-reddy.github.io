@@ -3,7 +3,7 @@ layout: post
 title: SpringBoot newlrelic integration through actuator
 description: "Through the actuator plugin provided by spring boot,How we will connect to
 NewRelic using metric registrey"
-modified: 2018-06-15
+created: 2018-06-16
 comments: true
 share:    true
 tags: [New Relic,Spring Boot,Metric Registrey,Actuator]
